@@ -1,0 +1,29 @@
+@mixin grid($cols, $margin) 
+    float: left
+    background: #fcfcfc
+    margin-bottom: $margin
+    height: 150px
+    width: ((100% - (($cols - 1) * $margin)) / $cols)
+
+    &:nth-child(#{&cols}n)
+        margin-right: 0
+    
+@mixin font ($fontW: bold, $color: orange)
+font-size: $mainFontSize
+font-weight: $fontW
+font-family: Arial, Helvetica, sans-serif
+color: $color
+
+@mixin padd ($padd...)
+    padding: $padd
+
+@mixin link($linkCol, $linkColHov, $linkColFoc, $linkColAct, $linkColVis)
+    color: $linkCol
+    &:hover
+        color: $linkColHov
+    &:focus
+        color: $linkColFoc
+    &:active
+        color: $linkColAct
+    &:visited
+        color: $linkColVis

@@ -1,13 +1,36 @@
 // Comment
 
-$bgColor: blue
-$color: #cccccc
-$blockWidth: 30%
-$border: 4px solid red
+@import "variables"
+@import "mixins"
     
 *
     padding: 0
     margin: 0
+
+.grid 
+    float: left
+    width: 100%
+
+    > div 
+        height: 25px
+        background-color: green
+        @include grid(4, 2%)
+
+// -------------- Миксины --------------
+
+
+
+
+
+// -------------- Псевдоклассы --------------
+
+
+
+
+a
+    @include link (green, red, orange, purple, pink)
+    
+// -------------- Синтаксис --------------
 
 .block:not(.first) 
     background: $bgColor
@@ -15,6 +38,9 @@ $border: 4px solid red
     margin-bottom: 20px
     width: $blockWidth
     border: $border
+    @include padd (50px 50px)
+
+// -------------- Вложенность --------------
 
 #central-block 
     padding: 30px
@@ -23,8 +49,15 @@ $border: 4px solid red
         list-style: none
         display: inline-block
         li
-            float: 
-            margin-right: 10px
+            float: left
+            width: (100% / 4)
+            // margin-right: 10px
+            @include font (light)
+            a 
+                @include font (bold, #d363ac)
+                &:hover, &:focus
+                    color: #fff536
+                
 
 
 .first
