@@ -1,10 +1,30 @@
-body {
-  background: blue;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-div {
-  width: 100px;
+.block:not(.first) {
+  background: black;
+  height: 200px;
+  margin-bottom: 20px;
+  width: 30%;
+  border: 4px solid red;
+}
+
+#central-block {
+  padding: 30px;
+}
+#central-block ul {
+  list-style: none;
+  display: inline-block;
+}
+#central-block li {
+  float: left;
+}
+
+.first {
+  background: black;
   height: 100px;
-  background: red;
-  margin: 10px;
+  margin-bottom: 20px;
+  border: 4px solid red;
 }
