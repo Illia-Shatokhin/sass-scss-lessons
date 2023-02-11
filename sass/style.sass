@@ -3,63 +3,58 @@
 @import "variables"
 @import "mixins"
     
-*
-    padding: 0
-    margin: 0
+// *
+//     padding: 0
+//     margin: 0
 
-// #grid 
-//     float: left
-//     width: 100%
-//     height: 100px
-//     > div 
-//         @include grid (4, 2%)
 
-// -------------- Миксины --------------
+// // -------------- Миксины --------------
+
+
+// // -------------- Псевдоклассы --------------
 
 
 
 
-
-// -------------- Псевдоклассы --------------
-
-
-
-
-a
-    @include link (green, red, orange, purple, pink)
+// a
+//     @include link (green, red, orange, purple, pink)
     
-// -------------- Синтаксис --------------
+// // -------------- Синтаксис --------------
 
-.block:not(.first) 
-    background: $bgColor
-    height: 200px
-    margin-bottom: 20px
-    width: $blockWidth
-    border: $border
-    @include padd (50px 50px)
+// .block:not(.first) 
+//     background: $bgColor
+//     height: 200px
+//     margin-bottom: 20px
+//     width: $blockWidth
+//     border: $border
+//     @include padd (50px 50px)
 
-// -------------- Вложенность --------------
+// // -------------- Вложенность --------------
 
-#central-block 
-    padding: 30px
+// #central-block 
+//     padding: 30px
 
-    ul 
-        list-style: none
-        display: inline-block
-        li
-            float: left
-            width: (100% / 4)
-            // margin-right: 10px
-            @include font (light)
-            a 
-                @include font (bold, #d363ac)
-                &:hover, &:focus
-                    color: #fff536
+//     ul 
+//         list-style: none
+//         display: inline-block
+//         li
+//             float: left
+//             width: (100% / 4)
+//             // margin-right: 10px
+//             @include font (light)
+//             a 
+//                 @include font (bold, #937510)
+//                 &:hover, &:focus
+//                     color: #fff536
                 
 
 
-.first
-    background: $bgColor
+// .first
+//     background: $bgColor
+//     height: 100px
+//     margin-bottom: 20px
+//     border: $border
+
+#grid
+    width: 100%
     height: 100px
-    margin-bottom: 20px
-    border: $border
